@@ -16,7 +16,7 @@ public class ContaPrincipal {
     
     // Metodo
     // - void quer dizer que não ira ter retorno para o usuario
-    public double gatSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
 
@@ -41,11 +41,6 @@ public class ContaPrincipal {
         this.nomeTitular = nomeTitular;
     }
 
-    // Metodo de classe 
-    public static int getTotal() {
-        return ContaPrincipal.total;
-    }
-
     public void depositar(double valor) {
         this.saldo +=  valor;
     }
@@ -67,5 +62,10 @@ public class ContaPrincipal {
         } else {
             return false;
         }
+    }
+
+    // Metodo de classe 
+    public static int getTotal() {
+        return ContaPrincipal.total;
     }
 }

@@ -2,12 +2,19 @@ package ByteBank;
 
 public class CriarConta {
     public static void main(String[] args) {
-        ContaPrincipal conta1 = new ContaPrincipal();
-        conta1.setSaldo = 1333.65;
-        System.out.println(conta1.saldo);
+        ContaPrincipal primeiraConta = new ContaPrincipal(6646,969060);
+        primeiraConta.depositar(200);
+        System.out.println(primeiraConta.getSaldo());
 
-        ContaPrincipal conta2 = new ContaPrincipal();
-        conta2.saldo = 2000.00;
-        System.out.println(conta2.saldo);
-    } 
+        primeiraConta.depositar(100);
+        System.out.println(primeiraConta.getSaldo());
+
+        ContaPrincipal segundaConta = new ContaPrincipal(6645,969061);
+        segundaConta.depositar(50);
+
+        System.out.println("primeira conta tem " + primeiraConta.getSaldo());
+        System.out.println("segunda conta tem " + segundaConta.getSaldo());
+
+        System.out.println("referenciar: " + primeiraConta);
+    }
 }
